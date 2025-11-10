@@ -1,8 +1,1 @@
-# Basic PowerShell to install AD (run as Administrator on Windows Server)
-Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
-Import-Module ADDSDeployment
-Install-ADDSForest `
- -DomainName "lab.local" `
- -SafeModeAdministratorPassword (ConvertTo-SecureString "P@ssw0rd!" -AsPlainText -Force) `
- -InstallDNS:$true -Force
 
